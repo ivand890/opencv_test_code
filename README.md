@@ -1,1 +1,1 @@
-# Learnig OpenCV
+# Learnnig OpenCV
