@@ -2,14 +2,16 @@ import cv2 as cv
 import numpy as np
 
 def resizeFrame(frame, dim=None, scale=None, inter=cv.INTER_AREA):
-    """Change scale of images, videos and live videos.
+    """Resize images or frames
 
     Args:
-        frame (numpy.ndarray): Image frame
-        scale (float, optional): Output scale. Defaults to 0.75.
+        frame (ndarray): image to resize`
+        dim (tuple, optional): Destination dimensions. Defaults to None.
+        scale (float, optional): Destination scale. Defaults to None.
+        inter (cv.INTER, optional): Interpolation function. Defaults to cv.INTER_AREA.
 
     Returns:
-        numpy.ndarray: Scaled image frame
+        ndarray: Resised frame
     """
     if dim and not scale:
         return cv.resize(frame, dim, interpolation=inter)
