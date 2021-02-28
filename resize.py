@@ -1,6 +1,7 @@
 import cv2 as cv
 import numpy as np
 
+
 def resizeFrame(frame, dim=None, scale=None, inter=cv.INTER_AREA):
     """Resize images or frames
 
@@ -28,6 +29,7 @@ def resizeFrame(frame, dim=None, scale=None, inter=cv.INTER_AREA):
     else:
         return frame
 
+
 def fractionFrames(frame, fraction):
     """Calculate the fraction dimension of a frame
 
@@ -38,5 +40,5 @@ def fractionFrames(frame, fraction):
     Returns:
         (width, heigth): fraction for dimension
     """
-    return int(frame.shape[1]*(fraction)), int(frame.shape[0]*(fraction))
+    return int(frame.shape[1] * (fraction)), int(frame.shape[0] * (fraction))
 
